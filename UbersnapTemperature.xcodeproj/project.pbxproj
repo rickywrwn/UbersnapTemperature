@@ -254,6 +254,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"UbersnapTemperature/Preview Content\"";
 				DEVELOPMENT_TEAM = MY7H65WNWV;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UbersnapTemperature",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -283,6 +287,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"UbersnapTemperature/Preview Content\"";
 				DEVELOPMENT_TEAM = MY7H65WNWV;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UbersnapTemperature",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
