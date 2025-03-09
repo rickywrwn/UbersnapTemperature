@@ -6,13 +6,43 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9C4CD6A82D7D9E54009C63FA /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4CD6A72D7D9E54009C63FA /* opencv2.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		9C4CD6692D7D99C7009C63FA /* UbersnapTemperature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UbersnapTemperature.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C4CD6A72D7D9E54009C63FA /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9C4CD6AD2D7DA4BA009C63FA /* Exceptions for "UbersnapTemperature" folder in "UbersnapTemperature" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9C4CD6682D7D99C7009C63FA /* UbersnapTemperature */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		9C4CD6AA2D7DA252009C63FA /* Exceptions for "UbersnapTemperature" folder in "Compile Sources" phase from "UbersnapTemperature" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 9C4CD6652D7D99C7009C63FA /* Sources */;
+			membershipExceptions = (
+				OpenCV/OpenCVWrapper.h,
+				"OpenCV/UbersnapTemperature-Bridging-Header.h",
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9C4CD66B2D7D99C7009C63FA /* UbersnapTemperature */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9C4CD6AD2D7DA4BA009C63FA /* Exceptions for "UbersnapTemperature" folder in "UbersnapTemperature" target */,
+				9C4CD6AA2D7DA252009C63FA /* Exceptions for "UbersnapTemperature" folder in "Compile Sources" phase from "UbersnapTemperature" target */,
+			);
 			path = UbersnapTemperature;
 			sourceTree = "<group>";
 		};
@@ -23,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C4CD6A82D7D9E54009C63FA /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +65,7 @@
 			children = (
 				9C4CD66B2D7D99C7009C63FA /* UbersnapTemperature */,
 				9C4CD66A2D7D99C7009C63FA /* Products */,
+				9C4CD6A72D7D9E54009C63FA /* opencv2.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +114,7 @@
 				TargetAttributes = {
 					9C4CD6682D7D99C7009C63FA = {
 						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
 					};
 				};
 			};
@@ -249,6 +282,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UbersnapTemperature/Preview Content\"";
@@ -257,13 +291,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UbersnapTemperature",
+					"$(PROJECT_DIR)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UbersnapTemperature/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "load and save image to gallery";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "load and save image to gallery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -272,6 +310,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rickywrwn.UbersnapTemperature;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "UbersnapTemperature/OpenCV/UbersnapTemperature-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -282,6 +322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UbersnapTemperature/Preview Content\"";
@@ -290,13 +331,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UbersnapTemperature",
+					"$(PROJECT_DIR)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UbersnapTemperature/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "load and save image to gallery";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "load and save image to gallery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +350,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rickywrwn.UbersnapTemperature;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "UbersnapTemperature/OpenCV/UbersnapTemperature-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

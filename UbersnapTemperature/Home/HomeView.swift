@@ -39,7 +39,13 @@ struct HomeView: View {
                     Image(uiImage: uiImage)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 250, height: 250)
+                        .frame(maxHeight: 350)
+                        .cornerRadius(10)
+                        .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.black, lineWidth: 2)
+                            )
+                        .padding(.vertical, 20)
                     
                     NavigationLink {
                         TemperatureView(selectedImageData: viewModel.selectedImageData ?? Data())
@@ -58,18 +64,20 @@ struct HomeView: View {
                 
                 Spacer()
             }
-            .padding()
-            .onChange(of: viewModel.imageError != nil) { hasErrorOld, hasError in
-                showingErrorAlert = hasError
-            }
-            .alert(isPresented: $showingErrorAlert, content: {
-                Alert(
-                    title: Text("Image Error"),
-                    message: Text(viewModel.imageError?.localizedDescription ?? "Unknown error"),
-                    dismissButton: .default(Text("OK"))
-                )
-            })
+            .background(.white)
         }
+        .padding()
+        .background(.white)
+        .onChange(of: viewModel.imageError != nil) { hasErrorOld, hasError in
+            showingErrorAlert = hasError
+        }
+        .alert(isPresented: $showingErrorAlert, content: {
+            Alert(
+                title: Text("Error"),
+                message: Text(viewModel.imageError?.localizedDescription ?? "Unknown error"),
+                dismissButton: .default(Text("OK"))
+            )
+        })
     }
 }
 
