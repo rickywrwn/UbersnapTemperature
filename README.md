@@ -9,6 +9,8 @@ After loading the JPEG photo, user can change the photo's temperature with slide
 The value of the slider is between -100(Cool) & 100(Warm)
 <br>
 After changing the temperature, user can save the photo to gallery with save button.
+<br>
+I'm using SwiftUI and MVVM as design pattern. The reason i use MVVM is to promote loose coupling and separation of concern between view and business logic.
 
 <h2>Setup Instruction</h2>
 
