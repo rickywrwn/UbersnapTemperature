@@ -1,9 +1,13 @@
 <h1>Ubersnap Assignment</h1>
-<h2>Project Overview</h2>=
+<h2>Project Overview</h2>
 The purpose of this application is to set or change temperature of JPEG photo.
+<br>
 User can load a photo from gallery only with JPEG format, any other formats will return Warning.
+<br>
 After loading the JPEG photo, user can change the photo's temperature with slider.
+<br>
 The value of the slider is between -100(Cool) & 100(Warm)
+<br>
 After changing the temperature, user can save the photo to gallery with save button.
 
 <h2>Setup Instruction</h2>
